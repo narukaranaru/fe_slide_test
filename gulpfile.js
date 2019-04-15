@@ -76,9 +76,7 @@ gulp.task('image', function() {
 var ejs = require('gulp-ejs');
 gulp.task('ejs', function() {
   var jsonData = {
-    data: {
-      genre: JSON.parse(fs.readFileSync('./' + path.html_src + 'data/genre.json'))
-    }
+    data: JSON.parse(fs.readFileSync('./' + path.html_src + 'data/genre.json'))
   };
   return gulp.src(path.html_src + 'pages/**/*.ejs')
     .pipe(plumber({
@@ -375,7 +373,7 @@ gulp.task('build:sample', function (callback) {
 
 // build
 gulp.task('build', function (callback) {
-  runSequence('build:html', 'build:css', 'build:js', 'build:img', 'build:sample', callback);
+  runSequence('del', ['build:html', 'build:css', 'build:js', 'build:img', 'build:sample'], callback);
 });
 
 // default

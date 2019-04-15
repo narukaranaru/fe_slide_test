@@ -29,8 +29,8 @@
 <%# タイトル -%>
 <!-- title -->
 <h1 class="title" id="js-id-test">
-  <span class="title__main"><%= data.genre.title.main %></span>
-  <span class="title__sub"><%= data.genre.title.sub %></span>
+  <span class="title__main"><%= data.title.main %></span>
+  <span class="title__sub"><%= data.title.sub %></span>
 </h1>
 <!-- /title -->
 
@@ -73,36 +73,34 @@
 <p id="hoge" class="fuga">サンプルテキスト</p>
 
 <%# 編集ピックアップ（リスト系リンク） -%>
-<!-- <% data.genre.panel.forEach(function (value, index) { %> -->
 <!-- panel -->
-<a href="#" class="panel js-lazy" data-original="<%= data.genre.panel[0].img %>">
+<a href="#" class="panel js-lazy" data-original="<%= data.panel[0].img %>">
   <article>
     <div class="panel__layer">
-      <p class="panel__contents"><%= data.genre.panel[0].contents %></p>
-      <h2 class="panel__headline"><%= data.genre.panel[0].headline %></h2>
-    </div>
-  </article>
-</a>
-<!-- /panel -->
-<!-- <% }) %> -->
-
-<!-- panel -->
-<a href="#" class="panel js-lazy" data-original="<%= data.genre.panel[1].img %>">
-  <article>
-    <div class="panel__layer">
-      <p class="panel__contents"><%= data.genre.panel[1].contents %></p>
-      <h2 class="panel__headline"><%= data.genre.panel[1].headline %></h2>
+      <p class="panel__contents"><%= data.panel[0].contents %></p>
+      <h2 class="panel__headline"><%= data.panel[0].headline %></h2>
     </div>
   </article>
 </a>
 <!-- /panel -->
 
 <!-- panel -->
-<a href="#" class="panel js-lazy" data-original="<%= data.genre.panel[2].img %>">
+<a href="#" class="panel js-lazy" data-original="<%= data.panel[1].img %>">
   <article>
     <div class="panel__layer">
-      <p class="panel__contents"><%= data.genre.panel[2].contents %></p>
-      <h2 class="panel__headline"><%= data.genre.panel[2].headline %></h2>
+      <p class="panel__contents"><%= data.panel[1].contents %></p>
+      <h2 class="panel__headline"><%= data.panel[1].headline %></h2>
+    </div>
+  </article>
+</a>
+<!-- /panel -->
+
+<!-- panel -->
+<a href="#" class="panel js-lazy" data-original="<%= data.panel[2].img %>">
+  <article>
+    <div class="panel__layer">
+      <p class="panel__contents"><%= data.panel[2].contents %></p>
+      <h2 class="panel__headline"><%= data.panel[2].headline %></h2>
     </div>
   </article>
 </a>
@@ -120,11 +118,11 @@
 
   <%# 記事モジュール用編集ピックアップ（リスト系リンク） -%>
   <!-- panel -->
-  <a href="#article_bdgl0123_aream0123_012" class="panel js-lazy js-modal-open-trigger js-sc-count" data-sc="CON_linkto_article01" data-original="<%= data.genre.panel[0].img %>">
+  <a href="#article_bdgl0123_aream0123_012" class="panel js-lazy js-modal-open-trigger js-sc-count" data-sc="CON_linkto_article01" data-original="<%= data.panel[0].img %>">
     <article>
       <div class="panel__layer">
-        <p class="panel__contents"><%= data.genre.panel[0].contents %></p>
-        <h3 class="panel__headline"><%= data.genre.panel[0].headline %></h3>
+        <p class="panel__contents"><%= data.panel[0].contents %></p>
+        <h3 class="panel__headline"><%= data.panel[0].headline %></h3>
       </div>
     </article>
   </a>
@@ -148,17 +146,17 @@
         <ul class="list js-listGroup js-displayNone">
           <li class="list__item">
             <a href="#" class="list__inner">
-              <p><%= data.genre.eki[0] %></p>
+              <p><%= data.eki[0] %></p>
             </a>
           </li>
           <li class="list__item">
             <a href="#" class="list__inner">
-              <p><%= data.genre.eki[1] %></p>
+              <p><%= data.eki[1] %></p>
             </a>
           </li>
           <li class="list__item">
             <a href="#" class="list__inner">
-              <p><%= data.genre.eki[2] %></p>
+              <p><%= data.eki[2] %></p>
             </a>
           </li>
         </ul>
@@ -172,22 +170,22 @@
         <ul class="list js-listGroup js-displayNone">
           <li class="list__item">
             <a href="#" class="list__inner">
-              <p><%= data.genre.area[0] %></p>
+              <p><%= data.area[0] %></p>
             </a>
           </li>
           <li class="list__item">
             <a href="#" class="list__inner">
-              <p><%= data.genre.area[1] %></p>
+              <p><%= data.area[1] %></p>
             </a>
           </li>
           <li class="list__item">
             <a href="#" class="list__inner">
-              <p><%= data.genre.area[2] %></p>
+              <p><%= data.area[2] %></p>
             </a>
           </li>
           <li class="list__item">
             <a href="#" class="list__inner">
-              <p><%= data.genre.area[3] %></p>
+              <p><%= data.area[3] %></p>
             </a>
           </li>
         </ul>
@@ -201,22 +199,22 @@
         <ul class="list js-listGroup js-displayNone">
           <li class="list__item">
             <a href="#" class="list__inner">
-              <p><%= data.genre.spot[0] %></p>
+              <p><%= data.spot[0] %></p>
             </a>
           </li>
           <li class="list__item">
             <a href="#" class="list__inner">
-              <p><%= data.genre.spot[1] %></p>
+              <p><%= data.spot[1] %></p>
             </a>
           </li>
           <li class="list__item">
             <a href="#" class="list__inner">
-              <p><%= data.genre.spot[2] %></p>
+              <p><%= data.spot[2] %></p>
             </a>
           </li>
           <li class="list__item">
             <a href="#" class="list__inner">
-              <p><%= data.genre.spot[3] %></p>
+              <p><%= data.spot[3] %></p>
             </a>
           </li>
         </ul>
@@ -240,14 +238,14 @@
       <li class="list__item">
         <a href="#" class="list__inner">
           <section>
-            <h3><%= data.genre.genre[0] %></h3>
+            <h3><%= data.genre[0] %></h3>
           </section>
         </a>
       </li>
       <li class="list__item">
         <a href="#" class="list__inner">
           <section>
-            <h3><%= data.genre.genre[1] %></h3>
+            <h3><%= data.genre[1] %></h3>
           </section>
         </a>
       </li>
