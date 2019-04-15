@@ -1,0 +1,43 @@
+/*
+---
+name: menu
+category:
+  - module
+  - module/menu
+---
+
+```html
+<!-- menu -->
+<ul class="menu">
+  <li class="menu__nav">menu</li>
+  <li class="menu__nav menu__nav--active">menu</li>
+  <li class="menu__nav">menu</li>
+  <li class="menu__nav">menu</li>
+  <li class="menu__nav">menu</li>
+  <li class="menu__nav">menu</li>
+</ul>
+<!-- /menu -->
+```
+*/
+
+@charset "utf-8";
+
+.menu {
+  display: flex;
+  align-items: center;
+  &__nav {
+    flex: 1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: $font-size-s;
+    color: $color-link;
+    background-color: #e8e2d1;
+    &--active {
+      color: #454340;
+      background-color: $color-white;
+    }
+  }
+}

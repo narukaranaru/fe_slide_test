@@ -1,0 +1,462 @@
+/*
+---
+name: slider
+category:
+  - module
+  - module/slider
+---
+
+default
+```html
+<!-- slider -->
+<div class="slider">
+  <div class="slider__inner">
+    <ul class="slider__list">
+      <li class="slider__item">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy" data-original="//dummyimage.com/240x240/f5f5f5/fff.png&text=dummy"></div>
+            <div class="slider__layer">
+              <h3 class="slider__headline">headline</h3>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy" data-original="//dummyimage.com/240x240/f5f5f5/fff.png&text=dummy"></div>
+            <div class="slider__layer">
+              <h3 class="slider__headline">headline</h3>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy" data-original="//dummyimage.com/240x240/f5f5f5/fff.png&text=dummy"></div>
+            <div class="slider__layer">
+              <h3 class="slider__headline">headline</h3>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy" data-original="//dummyimage.com/240x240/f5f5f5/fff.png&text=dummy"></div>
+            <div class="slider__layer">
+              <h3 class="slider__headline">headline</h3>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy" data-original="//dummyimage.com/240x240/f5f5f5/fff.png&text=dummy"></div>
+            <div class="slider__layer">
+              <h3 class="slider__headline">headline</h3>
+            </div>
+          </section>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- /slider -->
+```
+
+lg
+```html
+<!-- slider -->
+<div class="slider slider--lg">
+  <div class="slider__inner">
+    <ul class="slider__list">
+      <li class="slider__item slider__item--lg">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/440x440/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+              <h3 class="slider__headline slider__headline--sm">headline</h3>
+              </div>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--lg">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/440x440/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline slider__headline--sm">headline</h3>
+              </div>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--lg">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/440x440/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline slider__headline--sm">headline</h3>
+              </div>
+            </div>
+          </section>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- /slider -->
+```
+
+md
+```html
+<!-- slider -->
+<div class="slider slider--md">
+  <div class="slider__inner">
+    <ul class="slider__list">
+      <li class="slider__item slider__item--lg">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/440x440/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+              <h3 class="slider__headline slider__headline--sm">headline</h3>
+              </div>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--lg">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/440x440/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline slider__headline--sm">headline</h3>
+              </div>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--lg">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/440x440/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline slider__headline--sm">headline</h3>
+              </div>
+            </div>
+          </section>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- /slider -->
+```
+
+sm
+```html
+<!-- slider -->
+<div class="slider slider--sm">
+  <div class="slider__inner js-slider__inner">
+    <ul class="slider__list">
+      <li class="slider__item slider__item--md">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/280x280/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline">headline</h3>
+              </div>
+            </div>
+            <p class="txt-gray txt-xxxs txt-ellipsis mg-6t">access access access access access</p>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--md">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/280x280/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline">headline</h3>
+              </div>
+            </div>
+            <p class="txt-gray txt-xxxs txt-ellipsis mg-6t">access access access access access</p>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--md">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/280x280/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline">headline</h3>
+              </div>
+            </div>
+            <p class="txt-gray txt-xxxs txt-ellipsis mg-6t">access access access access access</p>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--md">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/280x280/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline">headline</h3>
+              </div>
+            </div>
+            <p class="txt-gray txt-xxxs txt-ellipsis mg-6t">access access access access access</p>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--md">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/280x280/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline">headline</h3>
+              </div>
+            </div>
+            <p class="txt-gray txt-xxxs txt-ellipsis mg-6t">access access access access access</p>
+          </section>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- /slider -->
+```
+
+xs
+```html
+<!-- slider -->
+<div class="slider slider--xs js-slider">
+  <div class="slider__inner js-slider__inner">
+    <ul class="slider__list">
+      <li class="slider__item slider__item--sm">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/200x200/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline">headline</h3>
+              </div>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--sm">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/200x200/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline">headline</h3>
+              </div>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--sm">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/200x200/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline">headline</h3>
+              </div>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--sm">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/200x200/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline">headline</h3>
+              </div>
+            </div>
+          </section>
+        </a>
+      </li>
+      <li class="slider__item slider__item--sm">
+        <a href="#">
+          <section>
+            <div class="slider__thumbnail js-lazy js-lazy-x" data-original="//dummyimage.com/200x200/f5f5f5/fff.png&text=dummy">
+              <div class="slider__layer">
+                <h3 class="slider__headline">headline</h3>
+              </div>
+            </div>
+          </section>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- /slider -->
+```
+*/
+
+@charset "utf-8";
+
+.slider {
+  width: 100%;
+  height: 168px;
+  overflow: hidden;
+  background-color: #fff;
+  + .arrowLink,
+  + .simpleButton {
+    border-top: solid 1px #eee;
+  }
+  &--map {
+    height: 160px;
+  }
+  &--lg {
+    height: 332px;
+  }
+  &--md {
+    height: 268px;
+  }
+  &--sm {
+    height: 204px;
+  }
+  &--xs {
+    height: 128px;
+  }
+  &__inner {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 20px;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  &__list {
+    position: absolute;
+    display: flex;
+    margin: 24px 0 24px 16px;
+  }
+  &--xs &__list {
+    margin: 12px 0 16px 12px;
+  }
+  &__item {
+    margin-right: 8px;
+    &:last-child {
+      margin-right: 16px;
+    }
+    &--lg {
+      margin-right: 20px;
+      width: 220px;
+    }
+    &--md {
+      width: 140px;
+    }
+    &--sm {
+      width: 100px;
+    }
+  }
+  &__thumbnail {
+    background-color: #e6d9c2;
+    background-size: cover;
+    background-position: center;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    &--bg_black {
+      background-color: #000;
+    }
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    &--movie {
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 14px 0 14px 20px;
+        border-color: transparent transparent transparent #fff;
+      }
+    }
+  }
+  &__title {
+    position: absolute;
+    bottom: 0;
+    padding: 4px 8px;
+    color: #fff;
+    font-size: $font-size-xxs;
+    font-weight: bold;
+    line-height: 1.27;
+  }
+  &__item--lg &__thumbnail {
+    width: 220px;
+    height: 220px;
+  }
+  &__item--md &__thumbnail {
+    width: 140px;
+    height: 140px;
+  }
+  &__item--sm &__thumbnail {
+    width: 100px;
+    height: 100px;
+  }
+  &__layer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .4);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    min-height: 40px;
+    padding: 6px 12px;
+  }
+  &__item--lg &__layer {
+    width: 220px;
+    min-height: 47px;
+    justify-content: flex-start;
+  }
+  &__item--md &__layer {
+    width: 140px;
+    min-height: 52px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__item--sm &__layer {
+    width: 100px;
+  }
+  &__headline {
+    color: #fff;
+    font-size: $font-size-s;
+    font-weight: bold;
+    line-height: 1.15;
+  }
+  &__item--lg &__headline {
+    width: 100%;
+    line-height: 1.5;
+    font-size: $font-size-xs;
+  }
+  &__item--md &__headline {
+    font-size: $font-size-xs;
+  }
+  &__item--sm &__headline {
+    font-size: $font-size-xs;
+    line-height: 1.33;
+  }
+}

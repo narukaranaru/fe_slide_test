@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="<%- root %>aigis_assets/css/highlight/prism.css" rel="stylesheet">
+    <link href="<%- root %>aigis_assets/css/theme.css" rel="stylesheet">
+    <link href="<%- root %>../../all/css/all.min.css" rel="stylesheet">
+  </head>
+<body>
+  <div class="aigis-container">
+    <%- include('sidemenu') %>
+    <div class="aigis-contents">
+      <div class="aigis-contents__body">
+        <%- include('components') %>
+      </div>
+    </div>
+  </div>
+  <!-- JS -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="<%- root %>../../all/js/jquery.lazyload.min.js"></script>
+  <script src="<%- root %>../../all/js/all.min.js"></script>
+  <!-- /JS -->
+</body>
+</html>

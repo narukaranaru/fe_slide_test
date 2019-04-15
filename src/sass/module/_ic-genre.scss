@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* before要素でアイコンを表示 */
+.ic-b {
+  position: relative;
+  &::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  &--location {
+    padding-left: calc(23px + 12px); /* アイコンの幅 + マージン */
+    &::before {
+      @mixin sprite $location;
+    }
+  }
+  &--eki {
+    padding-left: calc(12px + 9px);
+    &::before {
+      @mixin sprite $eki;
+    }
+  }
+  &--area {
+    padding-left: calc(11px + 10px);
+    &::before {
+      @mixin sprite $area;
+    }
+  }
+  &--spot {
+    padding-left: calc(14px + 7px);
+    &::before {
+      @mixin sprite $spot;
+    }
+  }
+}
+
+/* after要素でアイコンを表示 */
+.ic-a {
+  position: relative;
+  &::after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+  /* &--arrow-top {
+    padding-right: calc(15px + 4px);
+    &::after {
+      @mixin sprite $arrow-top;
+    }
+  } */
+}
+
+/* 要素自体でアイコンを表示 */
+.ic {
+  display: block;
+  &--arrow-circle {
+    @mixin sprite $arrow-circle;
+  }
+  &--close {
+    @mixin sprite $close;
+  }
+  &--line {
+    @mixin sprite $line;
+  }
+  &--tw {
+    @mixin sprite $twiiter;
+  }
+  &--fb {
+    @mixin sprite $facebook;
+  }
+  &--hatebu {
+    @mixin sprite $hatebu;
+  }
+}

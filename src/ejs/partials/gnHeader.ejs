@@ -1,0 +1,25 @@
+<%# header 1:ログインなし 2:ログインあり 3:横浜中華街 -%>
+<!-- 共通ヘッダー -->
+<% if (header === 1) { -%>
+<div id="gnHeader">
+<div id="gnHeaderContainer" class="gnColor">
+<div id="gnHeaderInner">
+<div id="gnHeaderLogo"><a href="//mobile.gnavi.co.jp/iphone/"><p>ぐるなび</p></a></div>
+</div>
+</div>
+</div>
+<% } else if (header === 2) { -%>
+<div id="gnHeader">
+<div id="gnHeaderContainer" class="gnColor">
+<div id="gnHeaderInner">
+<div id="gnHeaderLogo"><a href="//mobile.gnavi.co.jp/iphone/"><p>ぐるなび</p></a></div>
+<nav>
+<ul><li id="gnHeaderNewsBtn" class="gnBtn"><span id="gnNoticeNews"></span><a href="http://mobile.gnavi.co.jp/iphone/gnrl/gt-news/"><p id="gnNewsCountNum">…</p></a></li><li id="gnHeaderUserBtn" class="gnBtn gnUserMember" data-login="http://my.gnavi.co.jp/s/?sc_cid=head_login_myg"><a href="http://my.gnavi.co.jp/s/?sc_cid=head_login_myg"><p>myぐるなび</p></a></li></ul>
+</nav>
+</div>
+</div>
+<aside id="gnHeaderSearch"></aside><aside id="gnHeaderUser"></aside>
+<form name="headform" id="headform"><input type="hidden" name="head" value="head_login" /></form>
+</div>
+<% } -%>
+<!-- /共通ヘッダー -->

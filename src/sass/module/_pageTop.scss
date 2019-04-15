@@ -1,0 +1,26 @@
+/*
+---
+name: pageTop
+category:
+  - module
+  - module/pageTop
+---
+
+```html
+<!-- pageTop -->
+<div class="pageTop">
+  <a href="#page" class="ic-a ic-a--arrow-top">ページの先頭へ</a>
+</div>
+<!-- /pageTop -->
+```
+*/
+
+@charset "utf-8";
+
+.pageTop {
+  text-align: right;
+  margin: 20px 14px 10px 0;
+  > a {
+    color: #817869;
+  }
+}

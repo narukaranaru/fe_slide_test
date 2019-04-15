@@ -1,0 +1,20 @@
+<%# 初期値設定 -%>
+<% if (typeof twitter === 'undefined') { var twitter = false; } -%>
+
+<%# header 1:ログインなし 2:ログインあり -%>
+<%# footer 1:PC版へのリンクなし 2:PC版へのリンクあり -%>
+<!-- 全コンテンツ共通JS -->
+<script>window.jQuery || document.write('<script src="//x.gnst.jp/jquery-1.7.2.js?revision=20130520"><\/script>')</script>
+<% if (footer === 2) { -%>
+<script>$("#gotoPc").click(function(){$.cookie('smp_pcview', '1',{path: '/',domain: '.gnavi.co.jp'}); return true;});</script>
+<% } -%>
+<script>if(!jQuery.gncookie||!jQuery.cookie){document.write(unescape('%3Cscript%20src="//x.gnst.jp/jquery.gncookie.js?revision=20130722"%3E%3C/script%3E'));}</script>
+<% if (header === 2) { -%>
+<script src="//x.gnst.jp/s/h.js?revision=20150212"></script>
+<% } -%>
+<!-- /全コンテンツ共通JS  -->
+
+<!-- コンテンツ用JS -->
+<script src="js/jquery.lazyload.min.js"></script>
+<script src="js/lp.min.js"></script>
+<script src="js/test_transfer.min.js"></script>

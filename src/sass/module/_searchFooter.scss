@@ -1,0 +1,31 @@
+/*
+---
+name: searchFooter
+category:
+  - module
+  - module/searchFooter
+---
+
+```html
+<!-- searchFooter -->
+<div class="searchFooter">
+  <h2 class="searchFooter__headline">headline</h2>
+</div>
+<!-- /searchFooter -->
+```
+*/
+
+@charset "utf-8";
+
+.searchFooter {
+  background-color: #f0dbbc;
+  /* padding-bottom: 58px; */
+  padding-bottom: 39px;
+  &__headline {
+    font-size: $font-size-l;
+    font-weight: bold;
+    color: #847866;
+    text-align: center;
+    padding: 33px 16px 17px;
+  }
+}

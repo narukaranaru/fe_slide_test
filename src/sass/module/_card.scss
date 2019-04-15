@@ -1,0 +1,219 @@
+/*
+---
+name: card
+category:
+  - module
+  - module/card
+---
+
+default
+```html
+<!-- card -->
+<div class="card">
+  <a href="#" class="card__item">
+    <article>
+      <div class="card__thumbnail js-lazy" data-original="//dummyimage.com/320x320/f5f5f5/fff.png&text=dummy">
+      </div>
+      <div class="card__textBox">
+        <h3 class="card__shop">headline</h3>
+        <p class="card__info">info</p>
+        <p class="card__info">info</p>
+      </div>
+    </article>
+  </a>
+  <a href="#" class="card__item">
+    <article>
+      <div class="card__thumbnail js-lazy" data-original="//dummyimage.com/320x320/f5f5f5/fff.png&text=dummy">
+      </div>
+      <div class="card__textBox">
+        <h3 class="card__shop">headline</h3>
+        <p class="card__info">info</p>
+        <p class="card__info">info</p>
+      </div>
+    </article>
+  </a>
+</div>
+<!-- /card -->
+```
+
+dark
+```html
+<!-- card -->
+<div class="card card--dark">
+  <a href="#" class="card__item">
+    <article>
+      <div class="card__thumbnail js-lazy" data-original="//dummyimage.com/320x320/f5f5f5/fff.png&text=dummy">
+      </div>
+      <div class="card__textBox">
+        <h3 class="card__shop">headline</h3>
+        <p class="card__info">info</p>
+        <p class="card__info">info</p>
+      </div>
+    </article>
+  </a>
+  <a href="#" class="card__item">
+    <article>
+      <div class="card__thumbnail js-lazy" data-original="//dummyimage.com/320x320/f5f5f5/fff.png&text=dummy">
+      </div>
+      <div class="card__textBox">
+        <h3 class="card__shop">headline</h3>
+        <p class="card__info">info</p>
+        <p class="card__info">info</p>
+      </div>
+    </article>
+  </a>
+</div>
+<!-- /card -->
+```
+*/
+
+@charset "utf-8";
+
+.card {
+  display: flex;
+  background-color: #e6d9c2;
+  &:nth-child(odd) {
+    > .card__item {
+      &:nth-child(odd) {
+        background-color: #9e764e;
+        .card__info {
+          color: #e2d6ca;
+        }
+      }
+      &:nth-child(even) {
+        background-color: #de9303;
+        .card__info {
+          color: #f8e9cd;
+        }
+      }
+    }
+  }
+  &:nth-child(even) {
+    > .card__item {
+      &:nth-child(odd) {
+        background-color: #de9303;
+        .card__info {
+          color: #f8e9cd;
+        }
+      }
+      &:nth-child(even) {
+        background-color: #9e764e;
+        .card__info {
+          color: #e2d6ca;
+        }
+      }
+    }
+  }
+  &--dark {
+    &:nth-child(odd) {
+      > .card__item {
+        &:nth-child(odd) {
+          background-color: #ad8658;
+          .card__info {
+            color: #f8e9cd;
+          }
+        }
+        &:nth-child(even) {
+          background-color: #866c57;
+          .card__info {
+            color: #f8e9cd;
+          }
+        }
+      }
+    }
+    &:nth-child(even) {
+      > .card__item {
+        &:nth-child(odd) {
+          background-color: #866c57;
+          .card__info {
+            color: #f8e9cd;
+          }
+        }
+        &:nth-child(even) {
+          background-color: #ad8658;
+          .card__info {
+            color: #f8e9cd;
+          }
+        }
+      }
+    }
+  }
+  &--red {
+    &:nth-child(odd) {
+      > .card__item {
+        &:nth-child(odd) {
+          background-color: #650000;
+          .card__info {
+            color: #e0cccc;
+          }
+        }
+        &:nth-child(even) {
+          background-color: #b20000;
+          .card__info {
+            color: #efcccc;
+          }
+        }
+      }
+    }
+    &:nth-child(even) {
+      > .card__item {
+        &:nth-child(odd) {
+          background-color: #b20000;
+          .card__info {
+            color: #efcccc;
+          }
+        }
+        &:nth-child(even) {
+          background-color: #650000;
+          .card__info {
+            color: #e0cccc;
+          }
+        }
+      }
+    }
+  }
+  + .card {
+    border-top: solid 1px #fff;
+  }
+  &__item {
+    display: block;
+    width: 50%;
+    min-height: 263px;
+    box-sizing: border-box;
+    &:first-child {
+      border-right: solid 1px #fff;
+    }
+  }
+  &__thumbnail {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  &__layer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    color: #fff;
+    padding: 4px 15px 2px;
+    box-sizing: border-box;
+  }
+  &__textBox {
+    padding: 11px 16px 10px;
+    box-sizing: border-box;
+    position: relative;
+  }
+  &__shop {
+    font-size: $font-size-xs;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  &__info {
+    font-size: $font-size-xxxs;
+    line-height: 1.2;
+    padding: 1px 0;
+  }
+}

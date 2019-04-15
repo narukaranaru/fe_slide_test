@@ -1,0 +1,43 @@
+/*
+---
+name: breadcrumbs
+category:
+  - module
+  - module/breadcrumbs
+---
+
+default(構造化マークアップはJSON-LD側に記述)
+```html
+<!-- breadcrumbs -->
+<ol class="breadcrumbs">
+  <li class="breadcrumbs__listItem">
+    <a href="#">breadcrumbsText</a>
+  </li>
+  <li class="breadcrumbs__listItem">
+    <a href="#">breadcrumbsText</a>
+  <li class="breadcrumbs__listItem">
+    <span class="txt-bold">breadcrumbsText</span>
+  </li>
+</ol>
+<!-- /breadcrumbs -->
+```
+---
+*/
+
+@charset "utf-8";
+
+.breadcrumbs {
+  justify-content: flex-start;
+
+  &__listItem {
+    display: inline;
+    font-size: $font-size-xxs;
+    color: #707070;
+    &:nth-of-type(n+2) {
+      padding-left: 4px;
+      &::before {
+        content: '>';
+      }
+    }
+  }
+}

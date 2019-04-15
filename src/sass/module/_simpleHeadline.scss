@@ -1,0 +1,28 @@
+/*
+---
+name: simpleHeadline
+category:
+  - module
+  - module/simpleHeadline
+---
+
+```html
+<!-- simpleHeadline -->
+<div class="simpleHeadline">
+  <h2 class="simpleHeadline__main">headline</h2>
+</div>
+<!-- /simpleHeadline -->
+```
+*/
+
+@charset "utf-8";
+
+.simpleHeadline {
+  padding: 30px 16px 10px;
+  &--wide {
+    padding-top: 50px;
+  }
+  &__main {
+    color: #454340;
+  }
+}

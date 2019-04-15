@@ -1,0 +1,37 @@
+/*
+---
+name: label
+category:
+  - module
+  - module/label
+---
+
+label
+```html
+<span class="label">label</span>
+```
+
+label--bg_white
+```html
+<span class="label label--bg_white">label</span>
+```
+*/
+
+@charset "utf-8";
+
+.label {
+  color: #fff;
+  padding: 1px 5px 0;
+  border-radius: 2px;
+  font-size: $font-size-xxxs;
+  display: inline-block;
+  line-height: 11px;
+  height: 11px;
+  background-color: #f48300;
+  border: 1px solid #f48300;
+  &--bg_white {
+    color: #f48300;
+    background-color: #fff;
+    border: 1px solid #f8b364;
+  }
+}

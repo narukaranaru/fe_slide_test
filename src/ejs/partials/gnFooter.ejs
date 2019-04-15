@@ -1,0 +1,17 @@
+<%# footer 1:PC版へのリンクなし 2:PC版へのリンクあり -%>
+<!-- 共通フッター -->
+<% if (footer === 1) { -%>
+<div id="gnFooter">
+<div id="gnFooterInner">
+<div id="gnFooterCopyRight"><p><a href="https://mobile.gnavi.co.jp/iphone/">ぐるなび</a><span>© Gurunavi, Inc.</span></p></div>
+</div>
+</div>
+<% } else if (footer === 2) { -%>
+<div id="gnFooter">
+<div id="gnFooterInner">
+<div id="gnFooterCopyRight"><p><a href="https://mobile.gnavi.co.jp/iphone/">ぐるなび</a><span>© Gurunavi, Inc.</span></p></div>
+<div id="gnFooterChangeDevice"><p><a href="https://www.gnavi.co.jp/" id="gotoPc">PC版</a></p></div>
+</div>
+</div>
+<% } -%>
+<!-- /共通フッター -->

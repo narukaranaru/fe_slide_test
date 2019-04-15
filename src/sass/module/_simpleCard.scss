@@ -1,0 +1,195 @@
+/*
+---
+name: simpleCard
+category:
+  - module
+  - module/simpleCard
+---
+
+default
+```html
+<!-- simpleCard -->
+<div class="simpleCard">
+  <a href="#" class="simpleCard__item">
+    <article>
+      <div class="simpleCard__thumbnail js-lazy" data-original="//dummyimage.com/320x190/f5f5f5/fff.png&text=dummy"></div>
+      <div class="simpleCard__textBox">
+        <h3 class="simpleCard__headline">headline</h3>
+        <p class="simpleCard__text">text</p>
+      </div>
+    </article>
+  </a>
+  <a href="#" class="simpleCard__item">
+    <article>
+      <div class="simpleCard__thumbnail js-lazy" data-original="//dummyimage.com/320x190/f5f5f5/fff.png&text=dummy"></div>
+      <div class="simpleCard__textBox">
+        <h3 class="simpleCard__headline">headline</h3>
+        <p class="simpleCard__text">text</p>
+      </div>
+    </article>
+  </a>
+</div>
+<!-- /simpleCard -->
+```
+
+warm
+```html
+<!-- simpleCard -->
+<div class="simpleCard">
+  <article class="simpleCard__item simpleCard__item--warm">
+    <div class="simpleCard__thumbnail js-lazy" data-original="//dummyimage.com/320x190/f5f5f5/fff.png&text=dummy"></div>
+    <div class="simpleCard__textBox">
+      <h2 class="txt-brown txt-xxs txt-bold mg-2b">headline</h2>
+      <p class="txt-gray txt-xxs">text</p>
+    </div>
+  </article>
+  <article class="simpleCard__item simpleCard__item--warm">
+    <div class="simpleCard__thumbnail js-lazy" data-original="//dummyimage.com/320x190/f5f5f5/fff.png&text=dummy"></div>
+    <div class="simpleCard__textBox">
+      <h2 class="txt-brown txt-xxs txt-bold mg-2b">headline</h2>
+      <p class="txt-gray txt-xxs">text</p>
+    </div>
+  </article>
+</div>
+<!-- /simpleCard -->
+```
+
+arrow
+```html
+<!-- simpleCard -->
+<div class="simpleCard">
+  <a href="#" class="simpleCard__item simpleCard__item--warm simpleCard__item--arrow">
+    <article>
+      <div class="simpleCard__thumbnail js-lazy" data-original="//dummyimage.com/320x190/f5f5f5/fff.png&text=dummy"></div>
+      <div class="simpleCard__textBox">
+        <h2 class="txt-link txt-xxs txt-bold mg-2b">headline</h2>
+        <p class="txt-gray txt-xxs">text</p>
+        <span class="simpleCard__arrow"></span>
+      </div>
+    </article>
+  </a>
+  <a href="#" class="simpleCard__item simpleCard__item--warm simpleCard__item--arrow">
+    <article>
+      <div class="simpleCard__thumbnail js-lazy" data-original="//dummyimage.com/320x190/f5f5f5/fff.png&text=dummy"></div>
+      <div class="simpleCard__textBox">
+        <h2 class="txt-link txt-xxs txt-bold mg-2b">headline</h2>
+        <p class="txt-gray txt-xxs">text</p>
+        <span class="simpleCard__arrow"></span>
+      </div>
+    </article>
+  </a>
+</div>
+<!-- /simpleCard -->
+```
+*/
+
+@charset "utf-8";
+
+.simpleCard {
+  display: flex;
+  + .simpleButton {
+    border-top: solid 1px #e5e5e5;
+  }
+  &__item {
+    display: block;
+    flex: 1;
+    box-sizing: border-box;
+    background-color: #fff;
+    &--w100 {
+      width: 100%;
+    }
+
+    &:nth-child(odd) {
+      .simpleCard__textBox {
+        padding-left: 16px;
+        padding-right: 12px;
+        &--pd0 {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+    &:nth-child(even) {
+      border-left: solid 1px #e5e5e5;
+      .simpleCard__textBox {
+        padding-left: 12px;
+        padding-right: 16px;
+        &--pd0 {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+    &--warm {
+      background-color: #f0dbbc;
+      &:nth-child(even) {
+        border-left: solid 1px #fff;
+      }
+    }
+    &--arrow {
+      &:nth-child(n) {
+        .simpleCard__textBox {
+          padding-right: 25px;
+        }
+      }
+    }
+    &--noborder {
+      &:nth-child(even) {
+        border-left: none;
+      }
+    }
+  }
+  &__thumbnail {
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    &--h96 {
+      height: 96px;
+      background-repeat: no-repeat;
+      background-color: #f7f7f7;
+    }
+  }
+  &__textBox {
+    flex: 1;
+    padding-top: 8px;
+    padding-bottom: 16px;
+    position: relative;
+    &--pd0 {
+      padding-bottom: 0;
+    }
+  }
+  &__headline {
+    color: #000;
+    font-size: $font-size-s;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+  &__text {
+    color: #707070;
+    font-size: $font-size-xxxs;
+  }
+  &__arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 16px;
+    height: 20px;
+    background-color: #929292;
+    &::after {
+      display: block;
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-top: solid 2px #fff;
+      border-right: solid 2px #fff;
+      transform: rotate(45deg);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 4px;
+      margin: auto;
+    }
+  }
+}

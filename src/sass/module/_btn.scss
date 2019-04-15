@@ -1,0 +1,66 @@
+/*
+---
+name: btn
+category:
+  - module
+  - module/btn
+---
+
+default
+```html
+<!-- btn -->
+<div class="btn txt-center pd-8">btn</div>
+<!-- /btn -->
+```
+
+radius_2
+```html
+<!-- btn -->
+<div class="btn txt-center btn--radius_2 pd-8">btn</div>
+<!-- /btn -->
+```
+
+radius_4
+```html
+<!-- btn -->
+<div class="btn txt-center btn--radius_4 pd-8">btn</div>
+<!-- /btn -->
+```
+
+border_gray
+```html
+<!-- btn -->
+<div class="btn txt-center btn--border_gray pd-8">btn</div>
+<!-- /btn -->
+```
+
+width_164
+```html
+<!-- btn -->
+<div class="btn txt-center btn--width_164 pd-8">btn</div>
+<!-- /btn -->
+```
+*/
+
+@charset "utf-8";
+
+.btn {
+  background-color: $color-white;
+  color: $color-link;
+  display: block;
+  &--radius_2 {
+    border-radius: 2px;
+  }
+  &--radius_4 {
+    border-radius: 4px;
+  }
+  &--border_gray {
+    border: solid 1px #dcdcdc;
+  }
+  /* &--border_lightGray {
+    border: solid 1px #b2b2b2;
+  } */
+  &--width_164 {
+    width: 164px;
+  }
+}

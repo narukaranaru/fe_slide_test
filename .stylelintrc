@@ -1,0 +1,12 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "rule-empty-line-before": ["always", {
+      "ignore": ["after-comment", "inside-block"]
+    }],
+    "no-missing-end-of-source-newline": null,
+    "number-leading-zero": "never",
+    "max-empty-lines": 2,
+    "comment-empty-line-before": null
+  }
+}

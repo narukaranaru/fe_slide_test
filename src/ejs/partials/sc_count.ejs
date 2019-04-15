@@ -1,0 +1,16 @@
+<%# sc_countCook: 別ページへの遷移あり -%>
+<%# sc_count: 別ページへの遷移なし -%>
+<!-- onclick計測 -->
+<script>
+<% if (sc_countCook) { -%>
+$(document).on('click', '.js-sc-count', function() {
+  sc_countCook($(this).data('sc'));
+});
+<% } -%>
+<% if (sc_count) { -%>
+$(document).on('click', '.js-sc-count-in-page', function() {
+  sc_count($(this).data('sc'));
+});
+<% } -%>
+</script>
+<!-- /onclick計測 -->

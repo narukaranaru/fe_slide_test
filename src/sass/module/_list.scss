@@ -1,0 +1,244 @@
+/*
+---
+name: list
+category:
+  - module
+  - module/list
+---
+
+default
+```html
+<!-- list -->
+<ul class="list">
+  <li class="list__item">
+    <a href="#" class="list__inner">
+      <section>
+        <h3>hoge hige huge</h3>
+      </section>
+    </a>
+  </li>
+  <li class="list__item">
+    <a href="#" class="list__inner">
+      <section>
+        <h3>hoge hige huge</h3>
+      </section>
+    </a>
+  </li>
+</ul>
+<!-- /list -->
+```
+
+indent
+```html
+<ul class="list">
+  <li class="list__item list__item--indent">
+    <a href="#" class="list__inner">
+      <p class="txt-link">headline</p>
+    </a>
+  </li>
+  <li class="list__item list__item--indent">
+    <a href="#" class="list__inner">
+      <p class="txt-link">headline</p>
+    </a>
+  </li>
+</ul>
+```
+
+plus
+```html
+<ul class="list">
+  <li class="list__item">
+    <div class="list__inner list__inner--arrow_none">
+      <p class="txt-link">headline</p>
+      <span class="list__plus"></span>
+    </div>
+  </li>
+  <li class="list__item">
+    <div class="list__inner list__inner--arrow_none">
+      <p class="txt-link">headline</p>
+      <span class="list__plus"></span>
+    </div>
+  </li>
+</ul>
+```
+
+minus
+```html
+<ul class="list">
+  <li class="list__item">
+    <div class="list__inner list__inner--arrow_none">
+      <p class="txt-link">headline</p>
+      <span class="list__minus"></span>
+    </div>
+  </li>
+  <li class="list__item">
+    <div class="list__inner list__inner--arrow_none">
+      <p class="txt-link">headline</p>
+      <span class="list__minus"></span>
+    </div>
+  </li>
+</ul>
+```
+
+dark
+```html
+<!-- list -->
+<ul class="list list--border">
+  <li class="list__item list__item--dark">
+    <a href="#" class="list__inner list__inner--dark">
+      <section>
+        <h3>hoge hige huge</h3>
+      </section>
+    </a>
+  </li>
+  <li class="list__item list__item--dark">
+    <a href="#" class="list__inner list__inner--dark">
+      <section>
+        <h3>hoge hige huge</h3>
+      </section>
+    </a>
+  </li>
+</ul>
+<!-- /list -->
+```
+
+header
+```html
+<!-- list -->
+<ul class="list">
+  <li class="list__inner list__inner--header list__inner--close">headline</li>
+</ul>
+<!-- /list -->
+```
+
+border_all
+```html
+<!-- list -->
+<ul class="list">
+  <li class="list__item list__item--border_all">
+    <a href="#" class="list__inner">
+      <section>
+        <h3>hoge hige huge</h3>
+      </section>
+    </a>
+  </li>
+  <li class="list__item list__item--border_all">
+    <a href="#" class="list__inner">
+      <section>
+        <h3>hoge hige huge</h3>
+      </section>
+    </a>
+  </li>
+</ul>
+<!-- /list -->
+```
+*/
+
+@charset "utf-8";
+
+.list {
+  background-color: #fff;
+  &--border {
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+  }
+  &__item {
+    border-bottom: solid 1px #eee;
+    &--dark {
+      border-bottom: solid 1px #ccc;
+    }
+    &--indent {
+      margin-left: 30px;
+      &:first-child {
+        border-top: solid 1px #eee;
+      }
+    }
+    &:last-child {
+      border-bottom: none;
+    }
+    &--border_all {
+      border: 1px solid #ccc;
+      &:last-child {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+  &__item--indent &__inner {
+    padding-left: 6px;
+  }
+  &__inner {
+    position: relative;
+    display: block;
+    padding: 15px 32px 15px 16px;
+    &::after {
+      display: block;
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-top: solid 2px #959595;
+      border-right: solid 2px #959595;
+      transform: rotate(45deg);
+      position: absolute;
+      right: 16px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    &--arrow_none {
+      &::after {
+        display: none;
+      }
+    }
+    &--dark {
+      &::after {
+        border-top: solid 2px #797572;
+        border-right: solid 2px #797572;
+      }
+    }
+    &--header {
+      background-color: #feebd3;
+      border-top: solid 1px #ead6b8;
+    }
+    &--border {
+      border-top: solid 1px #eee;
+    }
+    &--close {
+      &::after {
+        transform: rotate(135deg);
+      }
+    }
+    &--open {
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &__plus {
+    width: 2px;
+    height: 10px;
+    background-color: #adadad;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 21px;
+    margin: auto;
+    &::before {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: #adadad;
+      transform: rotate(90deg);
+    }
+  }
+  &__minus {
+    width: 10px;
+    height: 2px;
+    background-color: #adadad;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 16px;
+    margin: auto;
+  }
+}

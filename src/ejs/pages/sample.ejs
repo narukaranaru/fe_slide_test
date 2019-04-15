@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>${タイトル}</title>
+<meta name="description" content="${ディスクリプション}">
+<meta name="keywords" content="${キーワード}">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="${タイトル}">
+<meta property="og:description" content="${ディスクリプション}">
+<meta property="og:url" content="${URL}">
+<meta property="og:image" content="${OGP画像URL}">
+<link rel="canonical" href="${URL}">
+<link rel="next" href="${次のページのURL}">
+<link rel="apple-touch-icon" href="//x.gnst.jp/webclip.png">
+<link rel="stylesheet" href="//c-x.gnst.jp/s/g.css">
+<link rel="stylesheet" href="css/lp.css">
+<%- include('../partials/ga_head') %>
+</head>
+<body>
+
+<!-- #page -->
+<div id="page">
+
+<%# 共通ヘッダー -%>
+<%- include('../partials/gnHeader', {header: 2}); %>
+
+<%# タイトル -%>
+<!-- title -->
+<h1 class="title" id="js-id-test">
+  <span class="title__main"><%= data.genre.title.main %></span>
+  <span class="title__sub"><%= data.genre.title.sub %></span>
+</h1>
+<!-- /title -->
+
+
+<ul class="js-list">
+  <li class="js-list-item">要素1</li>
+  <li class="js-list-item">要素2</li>
+  <li class="js-list-item">要素3</li>
+  <li class="js-list-item">要素4</li>
+  <li class="js-list-item">要素5</li>
+</ul>
+
+<ul id="js-dom" class="js-dom">
+  <li class="js-dom-item">要素1dom</li>
+  <li class="js-dom-item">要素2dom</li>
+  <li class="js-dom-item">要素3dom</li>
+</ul>
+
+<div class="button js-trigger">button</div>
+<div class="button js-trigger2">button2</div>
+
+<div class="outer">
+  <div class="inner"></div>
+</div>
+
+<div class="outer">
+  <div class="inner"></div>
+</div>
+
+<a href="https://www.google.co.jp/" class="link">google</a>
+
+<div class="trans">
+  <ul class="trans__list">
+    <li class="trans__item">flexbox</li>
+    <li class="trans__item">を</li>
+    <li class="trans__item">並べる</li>
+  </ul>
+</div>
+
+<p id="hoge" class="fuga">サンプルテキスト</p>
+
+<%# 編集ピックアップ（リスト系リンク） -%>
+<!-- <% data.genre.panel.forEach(function (value, index) { %> -->
+<!-- panel -->
+<a href="#" class="panel js-lazy" data-original="<%= data.genre.panel[0].img %>">
+  <article>
+    <div class="panel__layer">
+      <p class="panel__contents"><%= data.genre.panel[0].contents %></p>
+      <h2 class="panel__headline"><%= data.genre.panel[0].headline %></h2>
+    </div>
+  </article>
+</a>
+<!-- /panel -->
+<!-- <% }) %> -->
+
+<!-- panel -->
+<a href="#" class="panel js-lazy" data-original="<%= data.genre.panel[1].img %>">
+  <article>
+    <div class="panel__layer">
+      <p class="panel__contents"><%= data.genre.panel[1].contents %></p>
+      <h2 class="panel__headline"><%= data.genre.panel[1].headline %></h2>
+    </div>
+  </article>
+</a>
+<!-- /panel -->
+
+<!-- panel -->
+<a href="#" class="panel js-lazy" data-original="<%= data.genre.panel[2].img %>">
+  <article>
+    <div class="panel__layer">
+      <p class="panel__contents"><%= data.genre.panel[2].contents %></p>
+      <h2 class="panel__headline"><%= data.genre.panel[2].headline %></h2>
+    </div>
+  </article>
+</a>
+<!-- /panel -->
+
+<%# 人気ラーメン店ならここ -%>
+<section class="section">
+
+  <!-- headline -->
+  <div class="headline">
+    <h2 class="headline__main">一度は行きたい超人気のお店</h2>
+    <p class="headline__sub">記念日・誕生日に予約必須の名店を紹介</p>
+  </div>
+  <!-- /headline -->
+
+  <%# 記事モジュール用編集ピックアップ（リスト系リンク） -%>
+  <!-- panel -->
+  <a href="#article_bdgl0123_aream0123_012" class="panel js-lazy js-modal-open-trigger js-sc-count" data-sc="CON_linkto_article01" data-original="<%= data.genre.panel[0].img %>">
+    <article>
+      <div class="panel__layer">
+        <p class="panel__contents"><%= data.genre.panel[0].contents %></p>
+        <h3 class="panel__headline"><%= data.genre.panel[0].headline %></h3>
+      </div>
+    </article>
+  </a>
+  <!-- /panel -->
+
+</section>
+<%# 詳細検索（エリア） -%>
+  <section>
+
+    <!-- searchFooter__headline -->
+    <h2 class="searchFooter__headline">場所から探す</h2>
+    <!-- /searchFooter__headline -->
+
+    <!-- list -->
+    <ul class="list">
+      <li>
+        <section class="list__inner list__inner--header list__inner--close js-listHeader">
+          <h3 class="ic-b ic-b--eki">駅</h3>
+        </section>
+        <!-- list -->
+        <ul class="list js-listGroup js-displayNone">
+          <li class="list__item">
+            <a href="#" class="list__inner">
+              <p><%= data.genre.eki[0] %></p>
+            </a>
+          </li>
+          <li class="list__item">
+            <a href="#" class="list__inner">
+              <p><%= data.genre.eki[1] %></p>
+            </a>
+          </li>
+          <li class="list__item">
+            <a href="#" class="list__inner">
+              <p><%= data.genre.eki[2] %></p>
+            </a>
+          </li>
+        </ul>
+        <!-- /list -->
+      </li>
+      <li>
+        <section class="list__inner list__inner--header list__inner--close js-listHeader">
+          <h3 class="ic-b ic-b--area">エリア</h3>
+        </section>
+        <!-- list -->
+        <ul class="list js-listGroup js-displayNone">
+          <li class="list__item">
+            <a href="#" class="list__inner">
+              <p><%= data.genre.area[0] %></p>
+            </a>
+          </li>
+          <li class="list__item">
+            <a href="#" class="list__inner">
+              <p><%= data.genre.area[1] %></p>
+            </a>
+          </li>
+          <li class="list__item">
+            <a href="#" class="list__inner">
+              <p><%= data.genre.area[2] %></p>
+            </a>
+          </li>
+          <li class="list__item">
+            <a href="#" class="list__inner">
+              <p><%= data.genre.area[3] %></p>
+            </a>
+          </li>
+        </ul>
+        <!-- /list -->
+      </li>
+      <li>
+        <section class="list__inner list__inner--header list__inner--close js-listHeader">
+          <h3 class="ic-b ic-b--spot">スポット</h3>
+        </section>
+        <!-- list -->
+        <ul class="list js-listGroup js-displayNone">
+          <li class="list__item">
+            <a href="#" class="list__inner">
+              <p><%= data.genre.spot[0] %></p>
+            </a>
+          </li>
+          <li class="list__item">
+            <a href="#" class="list__inner">
+              <p><%= data.genre.spot[1] %></p>
+            </a>
+          </li>
+          <li class="list__item">
+            <a href="#" class="list__inner">
+              <p><%= data.genre.spot[2] %></p>
+            </a>
+          </li>
+          <li class="list__item">
+            <a href="#" class="list__inner">
+              <p><%= data.genre.spot[3] %></p>
+            </a>
+          </li>
+        </ul>
+        <!-- /list -->
+      </li>
+    </ul>
+    <!-- /list -->
+
+  </section>
+
+
+<%# 詳細検索（ジャンル） -%>
+  <section>
+
+    <!-- searchFooter__headline -->
+    <h2 class="searchFooter__headline">ジャンルから探す</h2>
+    <!-- /searchFooter__headline -->
+
+    <!-- list -->
+    <ul class="list">
+      <li class="list__item">
+        <a href="#" class="list__inner">
+          <section>
+            <h3><%= data.genre.genre[0] %></h3>
+          </section>
+        </a>
+      </li>
+      <li class="list__item">
+        <a href="#" class="list__inner">
+          <section>
+            <h3><%= data.genre.genre[1] %></h3>
+          </section>
+        </a>
+      </li>
+    </ul>
+    <!-- /list -->
+
+  </section>
+
+</div>
+<!-- searchFooter -->
+
+
+<%# 共通フッター -%>
+<%- include('../partials/gnFooter', {footer: 1}) %>
+
+</div>
+<!-- /#page -->
+
+<!-- modalArticle -->
+<div id="js-modal-overlay" class="modal js-displayNone is-fade is-fade--hidden">
+  <div id="article_bdgl0123_aream0123_012" class="modal__wrap js-modal js-displayNone is-fade is-fade--hidden">
+    <div class="modal__layer">
+      <div class="modal__btn-close js-modal-close-btn js-modal-close-trigger is-fade">
+        <span class="ic ic--close"></span>
+      </div>
+      <div class="modal__body">
+        <div class="pd-16lr">
+          <p class="txt-xxl txt-bold mg-12b txt-333">【保存版】絶対外せない神戸グルメはこれだ！地元おすすめの名物9選</p>
+          <hr class="hr hr--gray">
+          <p class="mg-20tb">異国情緒溢れる街並みが美しい港町・神戸。北野異人街やポートアイランド、六甲山など数々の観光名所がありますが、地元の｢神戸っ子｣に愛される名物グルメはぜひ押さえておきたいところ。今回は、地元を良く知るライターが本当におすすめする名物グルメ9選をご紹介します！</p>
+          <hr class="hr hr--gray">
+          <div>
+            <p class="mg-20b pd-40t txt-bold txt-l txt-333">1. 神戸人のソウル・フード！瀬戸内で捕れた肉厚な穴子を使用した「箱寿司」</p>
+            <div class="thumbnail mg-20b">
+              <img data-original="//c-gurutabi.gnst.jp/public/img/article/7c/b5/art001860/article_art001860_2.jpg?20170502180400" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" class="thumbnail__img js-lazy-modal">
+            </div>
+            <p class="mg-20b">神戸自慢の食材といえば、瀬戸内海で捕れる新鮮な穴子。さまざまな料理のメインディッシュとして使われますが、地元の人が何より好きなのは穴子の「箱寿司｣です。中華料理店がひしめく南京町のメインストリートを南側に曲がると「檜垣（ひがき）」という箱寿司の名店が目に飛び込んできます。 </p>
+            <div class="boxLink">
+              <div class="boxLink__inner">
+                <p class="txt-base txt-bold">【肉厚な伝助穴子を惜しげもなく使った箱寿司】 </p>
+                <p class="txt-s txt-313131">神戸人のソウル・フード、箱寿司「檜垣」と港町の「パブ・ケネス」</p>
+              </div>
+            </div>
+            <div class="boxLink">
+              <a href="#" target="_blank" class="boxLink__inner">
+                <p class="txt-base txt-bold">【肉厚な伝助穴子を惜しげもなく使った箱寿司】 </p>
+                <p class="txt-s txt-313131">神戸人のソウル・フード、箱寿司「檜垣」と港町の「パブ・ケネス」</p>
+              </a>
+            </div>
+          </div>
+          <p class="pd-40t mg-20b">以上、地元のライターがオススメする神戸グルメ9選でした。他の街ではなかなか見られない独特な食文化のある神戸。神戸港の開港をきっかけに、外国の文化を受け入れて発展してきた歴史があるため、このような食文化が形成されたのだとか。今回は、伝統的で洗練された洋食から老若男女に愛される喫茶店、酒蔵でしか手に入らない日本酒まで、さまざまなお店を紹介しました。神戸観光の際には、ぜひ神戸でしか食べられない名物グルメを食べてみてくださいね！</p>
+          <%# プロフィール -%>
+          <div class="profileCard">
+            <div class="profileCard__head">
+              <img data-original="//c-gurutabi.gnst.jp/public/img/writer/03/af/63/writer_icon_63.jpg?1493198220" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="profileCard__thumb js-lazy-modal" alt="ぐるたび編集部">
+              <p class="profileCard__name">ぐるたび編集部</p>
+            </div>
+            <div class="profileCard__body">
+              <p class="profileCard__text">学びや刺激・感動のある旅サイト「ぐるたび」の編集部。選りすぐりの旅グルメ＆観光情報レポートを発信していきます。</p>
+            </div>
+          </div>
+          <%# プロフィール -%>
+          <a href="#" target="_blank" class="profileCard">
+            <div class="profileCard__head">
+              <img data-original="//c-gurutabi.gnst.jp/public/img/writer/03/af/63/writer_icon_63.jpg?1493198220" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="profileCard__thumb js-lazy-modal" alt="ぐるたび編集部">
+              <p class="profileCard__name">ぐるたび編集部</p>
+            </div>
+            <div class="profileCard__body">
+              <p class="profileCard__text">学びや刺激・感動のある旅サイト「ぐるたび」の編集部。選りすぐりの旅グルメ＆観光情報レポートを発信していきます。</p>
+            </div>
+          </a>
+        </div>
+        <%# SNSボタン %>
+        <!-- socialMd -->
+        <ul class="socialMd pd-20tb">
+          <li class="socialMd__item"><a href="#" class="ic ic--line"></a></li>
+          <li class="socialMd__item"><a href="#" class="ic ic--tw"></a></li>
+          <li class="socialMd__item"><a href="#" class="ic ic--fb"></a></li>
+          <li class="socialMd__item"><a href="#" class="ic ic--hatebu"></a></li>
+        </ul>
+        <!-- /socialMd -->
+      </div>
+      <%# end modal__body -%>
+      <div class="modal__foot">
+        <div class="txt-center js-modal-close-trigger">
+          <a href="#" class="dis-block pd-16">閉じる</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /modalArticle -->
+
+<!-- 地図検索遷移用URL -->
+<script>
+var mapBaseUrl = '#';
+</script>
+<!-- /地図検索遷移用URL -->
+
+<%- include('../partials/script', {header: 2, footer: 1, contents: 'genre'}) %>
+
+<%- include('../partials/sc_count', {sc_countCook: true, sc_count: false}) %>
+
+<%- include('../partials/richCards') %>
+
+<%- include('../partials/ga') %>
+
+</body>
+</html>

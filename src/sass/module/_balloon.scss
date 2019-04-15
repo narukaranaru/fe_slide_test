@@ -1,0 +1,108 @@
+/*
+---
+name: balloon
+category:
+  - module
+  - module/balloon
+---
+
+default
+```html
+<!-- balloon -->
+<div style="position: relative; margin-top: 25px;">
+  <p class="balloon">balloon</p>
+</div>
+<!-- /balloon -->
+```
+
+circle
+```html
+<div style="position: relative; padding: 30px;">
+  <!-- balloon -->
+  <div class="balloon balloon--circle">
+    <p class="balloon__inner">balloon</p>
+  </div>
+  <!-- /baloon -->
+</div>
+```
+*/
+
+@charset "utf-8";
+
+.balloon {
+  position: absolute;
+  top: -24px;
+  left: 0;
+  margin: 0 6px;
+  background-color: #fff;
+  color: #ee660c;
+  font-size: $font-size-xxxs;
+  padding: 0 8px;
+  line-height: 25px;
+  height: 24px;
+  white-space: nowrap;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+  &::before {
+    display: block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -3px;
+    left: 15px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .2);
+    transform: rotate(45deg);
+  }
+  &::after {
+    display: block;
+    content: "";
+    width: 12px;
+    height: 6px;
+    background-color: #fff;
+    position: absolute;
+    left: 12px;
+    bottom: 0;
+  }
+
+  &--circle {
+    margin: 0;
+    padding: 0;
+    top: 8px;
+    left: 106px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f48300;
+    color: #fff;
+
+    &::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background-color: #f48300;
+      position: absolute;
+      bottom: 3px;
+      left: 21px;
+      box-shadow: none;
+      transform: skewX(55deg) rotate(45deg);
+    }
+
+    &::after {
+      content: none;
+    }
+
+    .balloon__inner {
+      display: inline-block;
+      position: relative;
+      top: 8px;
+      left: 10px;
+      font-weight: 700;
+      white-space: pre-wrap;
+      line-height: 1.2;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

@@ -1,0 +1,60 @@
+/*
+---
+name: tab
+category:
+  - module
+  - module/tab
+---
+
+```html
+<!-- tab -->
+<nav class="tab">
+  <ul class="tab__list">
+    <li class="tab__item tab__item--active">
+      <h3>タブ1</h3>
+    </li>
+    <li class="tab__item tab__item--disable">
+      <h3>タブ2</h3>
+    </li>
+  </ul>
+</nav>
+<!-- /tab -->
+```
+*/
+
+@charset "utf-8";
+
+.tab {
+  padding: 16px;
+  border-bottom: solid 1px #e5e5e5;
+  background-color: #fff;
+  &__list {
+    display: table;
+    width: 100%;
+  }
+  &__item {
+    width: 50%;
+    text-align: center;
+    border: solid 1px #ff7742;
+    border-left: none;
+    font-size: $font-size-s;
+    font-weight: bold;
+    padding: 6px 8px;
+    display: table-cell;
+    vertical-align: middle;
+    &:first-child {
+      border-left: solid 1px #ff7742;
+      border-radius: 5px 0 0 5px;
+    }
+    &:last-child {
+      border-radius: 0 5px 5px 0;
+    }
+    &--active {
+      background-color: #ff7742;
+      color: #fefefe;
+    }
+    &--disable {
+      color: #008eec;
+    }
+  }
+}

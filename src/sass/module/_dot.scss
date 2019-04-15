@@ -1,0 +1,31 @@
+/*
+---
+name: dot
+category:
+  - module
+  - module/dot
+---
+default
+```html
+<div class="txt-center">
+  <button id="dot0" class="dot dot--active" disabled="disabled">•</button>
+  <button id="dot1" class="dot">•</button>
+  <button id="dot2" class="dot">•</button>
+  <button id="dot3" class="dot">•</button>
+</div>
+```
+*/
+
+@charset "utf-8";
+
+.dot {
+  display: inline-block;
+  width: 16px;
+  font-size: 16px;
+  line-height: 1;
+  border: none;
+  background: none;
+  &--active {
+    color: #e60000;
+  }
+}

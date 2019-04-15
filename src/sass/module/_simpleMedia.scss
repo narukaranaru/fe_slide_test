@@ -1,0 +1,74 @@
+/*
+---
+name: simpleMedia
+category:
+  - module
+  - module/simpleMedia
+---
+
+default
+```html
+<div class="simpleMedia">
+  <div class="simpleMedia__thumbnail js-lazy" data-original="//dummyimage.com/104x104/f5f5f5/fff.png&text=dummy"></div>
+  <div class="simpleMedia__body">
+    <p class="txt-xxxs txt-gray">テキストテキストテキストテキストテキスト</p>
+    <p class="txt-xxxs txt-gray">テキスト</p>
+  </div>
+</div>
+```
+
+align_center
+```html
+<div class="simpleMedia simpleMedia--align_center">
+  <div class="simpleMedia__thumbnail js-lazy" data-original="//dummyimage.com/104x104/f5f5f5/fff.png&text=dummy"></div>
+  <div class="simpleMedia__body">
+    <p class="txt-xxxs txt-gray">テキストテキストテキストテキストテキスト</p>
+    <p class="txt-xxxs txt-gray">テキスト</p>
+  </div>
+</div>
+```
+*/
+
+@charset "utf-8";
+
+.simpleMedia {
+  display: flex;
+  &--align_center {
+    align-items: center;
+  }
+  &__thumbnail {
+    background-size: cover;
+    background-position: center;
+    width: 52px;
+    height: 52px;
+    margin-right: 8px;
+    &--l {
+      width: 60px;
+      height: 60px;
+      margin-right: 16px;
+    }
+    &--ms {
+      width: 48px;
+      height: 48px;
+      margin-right: 12px;
+    }
+    &--s {
+      width: 44px;
+      height: 44px;
+      margin-right: 16px;
+    }
+  }
+  &__body {
+    flex: 1;
+  }
+  &__info {
+    font-size: $font-size-xxxs;
+    color: #707070;
+  }
+  &__headline {
+    margin-top: -2px;
+    font-size: $font-size-l;
+    color: #313131;
+    font-weight: bold;
+  }
+}

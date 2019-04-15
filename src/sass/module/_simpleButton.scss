@@ -1,0 +1,38 @@
+/*
+---
+name: simpleButton
+category:
+  - module
+  - module/simpleButton
+---
+
+```html
+<!-- simpleButton -->
+<div class="simpleButton">simpleButton</div>
+<!-- /simpleButton -->
+```
+*/
+
+@charset "utf-8";
+
+.simpleButton {
+  display: block;
+  padding: 20px 16px;
+  text-align: center;
+  background-color: #fff;
+  color: $color-link;
+  &--fixed {
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 21px;
+    z-index: 1;
+    box-shadow: 0 -2px 4px 0 rgba(3, 3, 3, .1);
+    font-weight: bold;
+  }
+  &:first-child {
+    border-top: 1px solid #e5e5e5;
+  }
+}

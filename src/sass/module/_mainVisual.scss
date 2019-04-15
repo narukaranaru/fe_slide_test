@@ -1,0 +1,128 @@
+/*
+---
+name: mainVisual
+category:
+  - module
+  - module/mainVisual
+---
+default
+```html
+<!-- mainVisual -->
+<div class="mainVisual" style="background-image: url('./img/mainVisual.jpg');">
+  <div class="mainVisual__wrapper">
+    <h1>
+      <span class="mainVisual__mainText">mainText</span>
+      <span class="mainVisual__subText">subText</span>
+    </h1>
+    <p class="mainVisual__intro">text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text</p>
+  </div>
+</div>
+```
+
+list(accordionでサブテキスト表示)
+```html
+<!-- mainVisual -->
+<div class="mainVisual" style="background-image: url('./img/mainVisual.jpg');">
+  <div class="mainVisual__wrapper txt-center pd-0lr">
+    <h1 class="mainVisual__arrow mainVisual__arrow--close js-listHeader">
+      <span class="mainVisual__mainText txt-normal">京都グルメ特集</span>
+    </h1>
+    <div class="mainVisual__lead js-listGroup" style="display:none;">
+      <div class="mainVisual__leadWrap">
+        <div class="mainVisual__leadInner">
+          <p class="txt-left">text text text text text</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /mainVisual -->
+```
+*/
+
+@charset "utf-8";
+
+.mainVisual {
+  position: relative;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  &--bg_none {
+    background-image: none;
+  }
+  &__wrapper {
+    padding: 6px 16px 10px;
+    background-color: rgba(0, 0, 0, .4);
+    color: $color-white;
+  }
+  &__inner {
+    background-color: $color-white;
+    color: #313131;
+    padding: 12px 16px;
+  }
+  &__mainText {
+    font-size: $font-size-xxxl;
+    font-weight: bold;
+  }
+  &__subText {
+    font-size: $font-size-xxxs;
+    font-weight: bold;
+    margin-left: 3px;
+  }
+  &__intro {
+    color: $color-gray;
+    font-size: $font-size-xxxs;
+    line-height: 1.5;
+    position: relative;
+  }
+  &__lead {
+    position: relative;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 16px;
+    p {
+      font-size: $font-size-xxs;
+      line-height: 1.5;
+      float: left;
+    }
+  }
+  &__leadWrap {
+    position: relative;
+    overflow: hidden;
+    max-height: 84px;
+  }
+  &__leadInner {
+    position: relative;
+    left: 0;
+  }
+  &__arrow {
+    position: relative;
+    display: block;
+    padding: 24px 0 18px;
+    overflow: hidden;
+    &::after {
+      display: block;
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-top: solid 2px $color-white;
+      border-right: solid 2px $color-white;
+      transform: rotate(45deg);
+      position: absolute;
+      right: 16px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    &--close {
+      &::after {
+        transform: rotate(135deg);
+      }
+    }
+    &--open {
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

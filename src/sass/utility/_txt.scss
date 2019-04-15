@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/* font-weight */
+.txt-bold {
+  font-weight: bold;
+}
+
+.txt-normal {
+  font-weight: normal;
+}
+
+/* font-size */
+.txt-base { /* 14px */
+  font-size: $font-size-base;
+}
+
+.txt-xxxl { /* 22px */
+  font-size: $font-size-xxxl;
+}
+
+.txt-xxl { /* 19px */
+  font-size: $font-size-xxl;
+}
+
+.txt-xl { /* 17px */
+  font-size: $font-size-xl;
+}
+
+.txt-l { /* 16px */
+  font-size: $font-size-l;
+}
+
+.txt-m { /* 15px */
+  font-size: $font-size-m;
+}
+
+.txt-s { /* 13px */
+  font-size: $font-size-s;
+}
+
+.txt-xs { /* 12px */
+  font-size: $font-size-xs;
+}
+
+.txt-xxs { /* 11px */
+  font-size: $font-size-xxs;
+}
+
+.txt-xxxs { /* 10px */
+  font-size: $font-size-xxxs;
+}
+
+
+/* color */
+.txt-link { /* #008eec */
+  color: $color-link;
+}
+
+.txt-default { /* #000 */
+  color: $color-default;
+}
+
+.txt-white { /* #fff */
+  color: $color-white;
+}
+
+.txt-dark-gray { /* #444 */
+  color: $color-dark-gray;
+}
+
+.txt-gray { /* #707070 */
+  color: $color-gray;
+}
+
+.txt-brown { /* #847866 */
+  color: $color-brown;
+}
+
+.txt-333 {
+  color: #333;
+}
+
+.txt-313131 {
+  color: #313131;
+}
+
+.txt-ff6464 {
+  color: #ff6464;
+}
+
+.txt-121212 {
+  color: #121212;
+}
+
+
+/* text-align */
+.txt-right {
+  text-align: right;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+
+/* line-height */
+.txt-height-s {
+  line-height: 1.15;
+}
+
+.txt-line-l {
+  line-height: 1.5;
+}
+
+
+/* 文字省略 */
+.txt-ellipsis { /* 1行 */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

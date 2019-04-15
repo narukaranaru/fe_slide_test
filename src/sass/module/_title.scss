@@ -1,0 +1,56 @@
+/*
+---
+name: title
+category:
+  - module
+  - module/title
+---
+
+背景画像あり
+```html
+<!-- title -->
+<h1 class="title title--bg" style="background-image: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%), url('//dummyimage.com/420x150/f5f5f5/fff.png&text=dummy'); background-image: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%), url('//dummyimage.com/420x150/f5f5f5/fff.png&text=dummy');">
+  <span class="title__main">main</span>
+  <span class="title__sub">sub</span>
+</h1>
+<!-- /title -->
+```
+
+背景画像なし
+```html
+<!-- title -->
+<h1 class="title">
+  <span class="title__main">main</span>
+  <span class="title__sub">sub</span>
+</h1>
+<!-- /title -->
+```
+*/
+
+@charset "utf-8";
+
+.title {
+  background-color: #fff;
+  box-sizing: border-box;
+  min-height: 75px;
+  &--bg {
+    background-size: 240px 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-bottom: solid 1px #f7f3e8;
+  }
+  &__main {
+    font-size: 22px;
+    font-weight: bold;
+    color: #313131;
+    display: block;
+    padding: 16px 16px 0;
+  }
+  &__sub {
+    font-size: 11px;
+    color: #212121;
+    display: block;
+    padding: 1px 16px 13px;
+  }
+}

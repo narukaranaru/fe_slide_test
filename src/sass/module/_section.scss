@@ -1,0 +1,23 @@
+/*
+---
+name: section
+category:
+  - module
+  - module/section
+---
+
+```html
+<!-- section -->
+<section class="section" style="width: 375px; height: 200px; background-color: #fff;"></section>
+<!-- /section -->
+```
+*/
+
+@charset "utf-8";
+
+.section {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .1);
+  &__body {
+    background-color: #fff;
+  }
+}

@@ -1,0 +1,49 @@
+/*
+---
+name: more
+category:
+  - module
+  - module/more
+---
+
+```html
+<p class="js-more-container">
+  <span class="more more--ellipsis js-more-displayed">
+    text text text text text text text text text text text text text text
+    <span class="more__trigger js-more-trigger">もっと読む</span>
+  </span>
+  <span class="js-more-hidden js-displayNone">text text text text text text text text text text text text text text text text text text text text text text text text text text text</span>
+</p>
+```
+*/
+
+@charset "utf-8";
+
+.more {
+  display: inline;
+  &--ellipsis {
+    &::after {
+      display: inline;
+      content: "…";
+    }
+  }
+  &__trigger {
+    color: #008eec;
+    position: absolute;
+    right: 12px;
+    &::after {
+      display: inline-block;
+      content: "";
+      width: 5px;
+      height: 5px;
+      border-left: solid 2px #929292;
+      border-bottom: solid 2px #929292;
+      transform: rotate(-45deg);
+      vertical-align: middle;
+      position: absolute;
+      top: 0;
+      bottom: 4px;
+      margin: auto 0 auto 4px;
+    }
+  }
+}

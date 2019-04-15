@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+/* font-family */
+$font-family-default: Meiryo, "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", Osaka, Arial, Sans-serif;
+
+
+/* font-size */
+$font-size-root: 14px;
+$font-size-base: 1rem;
+
+$font-size-xxxl: 1.57143rem; /* 22px */
+$font-size-xxl: 1.35714rem; /* 19px */
+$font-size-xl: 1.21429rem; /* 17px */
+$font-size-l: 1.14286rem; /* 16px */
+$font-size-m: 1.07142rem; /* 15px */
+$font-size-s: .92857rem; /* 13px */
+$font-size-xs: .85714rem; /* 12px */
+$font-size-xxs: .78571rem; /* 11px */
+$font-size-xxxs: .71429rem; /* 10px */
+
+
+/* line-height */
+$line-height-base: 1.4;
+
+
+/* color */
+$color-default: #000;
+$color-link: #008eec;
+$color-white: #fff;
+$color-dark-gray: #444;
+$color-gray: #707070;
+$color-brown: #847866;
+
+
+/* bgcolor */
+$bgcolor-default: #f7f3e8;

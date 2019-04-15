@@ -1,0 +1,50 @@
+/*
+---
+name: boxLink
+category:
+  - module
+  - module/boxLink
+---
+link
+```html
+<!-- boxLink -->
+<div class="boxLink">
+  <a href="#" target="_blank" class="boxLink__inner">
+    <p class="txt-base txt-bold">txt-bold</p>
+    <p>text</p>
+  </a>
+</div>
+<!-- /boxLink -->
+```
+
+noLink
+```html
+<!-- boxLink -->
+<div class="boxLink">
+  <div class="boxLink__inner">
+    <ul class="txt-base">
+      <li><span class="txt-bold">txt-bold</span>
+      </li>
+      <li>text</li>
+      <li>text</li>
+      <li>text</li>
+      <li>URL：
+        <a href="#">Link</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- /boxLink -->
+```
+*/
+
+@charset "utf-8";
+
+.boxLink {
+  border: 1px solid #ccc;
+
+  &__inner {
+    display: block;
+    padding: 16px 16px 20px;
+  }
+}

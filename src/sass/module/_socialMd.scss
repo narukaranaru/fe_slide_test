@@ -1,0 +1,31 @@
+/*
+---
+name: socialMd
+category:
+  - module
+  - module/socialMd
+---
+
+```html
+<!-- socialMd -->
+<ul class="socialMd">
+  <li class="socialMd__item"><a href="#" class="ic ic--line"></a></li>
+  <li class="socialMd__item"><a href="#" class="ic ic--tw"></a></li>
+  <li class="socialMd__item"><a href="#" class="ic ic--fb"></a></li>
+  <li class="socialMd__item"><a href="#" class="ic ic--hatebu"></a></li>
+</ul>
+<!-- /socialMd -->
+```
+
+*/
+
+@charset "utf-8";
+
+.socialMd {
+  font-size: 0;
+  text-align: center;
+  &__item {
+    display: inline-block;
+    margin: 0 8px;
+  }
+}

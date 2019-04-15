@@ -1,0 +1,95 @@
+/*
+---
+name: ic
+category:
+  - module
+  - module/ic
+---
+
+before要素
+```html
+<p class="ic-b ic-b--location">location</p>
+<p class="ic-b ic-b--eki">eki</p>
+<p class="ic-b ic-b--area">area</p>
+<p class="ic-b ic-b--spot">spot</p>
+<p class="ic-b ic-b--chottog">chottog</p>
+<p class="ic-b ic-b--history">history</p>
+```
+
+after要素
+```html
+<span class="ic-a ic-a--arrow-top">arrow-top</span>
+```
+
+要素自体
+```html
+<div class="ic ic--line"></div>
+<div class="ic ic--tw"></div>
+<div class="ic ic--fb"></div>
+<div class="ic ic--hatebu"></div>
+<div class="ic ic--arrow-circle"></div>
+```
+*/
+
+@charset "utf-8";
+
+/* before要素でアイコンを表示 */
+.ic-b {
+  position: relative;
+  &::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+  &--lunch {
+    padding-left: calc(12px + 4px);
+    &::before {
+      @mixin sprite $lunch;
+
+      bottom: unset;
+    }
+  }
+  &--dinner {
+    padding-left: calc(10px + 4px);
+    &::before {
+      @mixin sprite $dinner;
+
+      bottom: unset;
+    }
+  }
+}
+
+/* after要素でアイコンを表示 */
+.ic-a {
+  position: relative;
+  &::after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+  &--arrow-top {
+    padding-right: calc(15px + 4px);
+    &::after {
+      @mixin sprite $arrow-top;
+    }
+  }
+}
+
+/* 要素自体でアイコンを表示 */
+.ic {
+  display: block;
+  &--close {
+    @mixin sprite $close;
+
+    width: 36px;
+    height: 36px;
+  }
+}

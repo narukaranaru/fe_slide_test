@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .85);
+
+  &__wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 1.5;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  &__layer {
+    background: #eee;
+  }
+  &__btn-close {
+    position: fixed;
+    top: 4px;
+    right: 4px;
+  }
+  &__body {
+    background: $color-white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+    padding: 44px 0 0;
+    font-size: $font-size-s;
+    color: #313131;
+    line-height: 1.845rem;
+  }
+  &__map {
+    max-width: 100%;
+  }
+}
