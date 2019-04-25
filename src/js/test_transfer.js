@@ -1,5 +1,5 @@
 // このjsファイルは, es5, es201X, jQueryの処理を書くことができます。
-
+import axios from 'axios'
 // defaultとしてexportするとimport時に自由に名前を決めれます。
 // import hoge from './module/test_transferModule'
 // 特定のメソッドのみimport

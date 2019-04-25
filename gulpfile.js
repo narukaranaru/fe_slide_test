@@ -212,14 +212,14 @@ gulp.task('browserify:transfer', function () {
 });
 
 // uglify
-var uglify = require('gulp-uglify');
+var terser = require('gulp-terser');
 
 gulp.task('uglify', function () {
   return gulp.src([path.dist + 'js/*.js','!' + path.dist + 'js/*.min.js'])
     .pipe(plumber({
       errorHandler: notify.onError('<%= error.message %>')
     }))
-    .pipe(uglify())
+    .pipe(terser())
     .pipe(rename({
       extname: '.min.js'
     }))

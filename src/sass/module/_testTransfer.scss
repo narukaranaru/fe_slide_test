@@ -9,6 +9,8 @@
   margin-bottom: 20px;
 }
 
+/* ここから下が編集範囲です */
+
 .outer {
   height: 200px;
   width: 200px;
@@ -63,8 +65,13 @@
   font-size: 20px;
 }
 
+.pseudo {
+  margin-top: 20px;
+  margin-bottom: 20px;
 
-.js-list-item:nth-child(even) {
-  background-color: gray;
+  &__item:nth-of-type(even) {
+    background-color: #fff;
+  }
+
+  /* 擬似クラス課題 ここに追記 */
 }
-
