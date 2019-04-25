@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>${タイトル}</title>
+  <meta name="description" content="${ディスクリプション}">
+  <meta name="keywords" content="${キーワード}">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="${タイトル}">
+  <meta property="og:description" content="${ディスクリプション}">
+  <meta property="og:url" content="${URL}">
+  <meta property="og:image" content="${OGP画像URL}">
+  <link rel="canonical" href="${URL}">
+  <link rel="next" href="${次のページのURL}">
+  <link rel="apple-touch-icon" href="//x.gnst.jp/webclip.png">
+  <link rel="stylesheet" href="//c-x.gnst.jp/s/g.css">
+  <link rel="stylesheet" href="css/lp.css">
+  <%- include('../partials/ga_head') %>
+</head>
+
+<body>
+    <h1>css練習</h1>
+    <h2>文字の装飾を理解する.</h2>
+    <h3>文字色を変える</h3>
+    <p>問題：以下の文字を赤色にしてください.</p>
+    <p class="text-deco01">
+      この文字を変えてください。この文字を変えてください。この文字を変えてください。この文字を変えてください。
+    </p>
+    <hr />
+    <h3>文字サイズを変える</h3>
+    <p>問題：以下の文字サイズを24pxに設定してください.</p>
+    <p class="text-deco02">
+      この文字のサイズを変えてください。この文字のサイズを変えてください。この文字のサイズを変えてください。
+    </p>
+    <hr />
+    <h3>書体を変える</h3>
+    <p>問題：以下の文字列の書体をHelveticaにしてください</p>
+    <p class="text-deco03">
+      Please change the font of this text.Please change the font of this text.Please change the font of this text.
+    </p>
+    <hr />
+    <h3>文字を太くする.</h3>
+    <p>問題：以下の文字を太くしてください</p>
+    <p class="text-deco04">この文字を太くしてください。</p>
+    <hr />
+    <h3>下線を引く.</h3>
+    <p>問題：以下の文字に下線を引いてください</p>
+    <p class="text-deco05">この文字に下線を引いてください。</p>
+    <hr />
+    <h3>複数の宣言を組み合わせる</h3>
+    <p>問題：以下の文字に、以下の指定された要素を適用してください。</p>
+    <ul>
+      <li>文字色を「#44f」に変更</li>
+      <li>文字サイズを36pxに変更</li>
+      <li>書体をFuturaに変更</li>
+      <li>下線を引いてください</li>
+      <li>文字を太くしてください</li>
+    </ul>
+    <p class="text-deco06">Have a magical day</p>
+    <hr />
+    <h2>ブロック要素に対しての装飾を理解する.</h2>
+    <h3>ブロック要素の余白を作る.(margin)</h3>
+    <p>問題：以下のブロック要素の余白を任意の値で設定してください。</p>
+    <div class="margin-padding block-deco01">margin要素1</div>
+    <div class="margin-padding block-deco01">margin要素2</div>
+    <hr />
+    <h3>ブロック要素の間隔を確保する.(padding)</h3>
+    <p>問題：以下のブロック要素内の余白を任意の値で設定してください。</p>
+    <div class="margin-padding block-deco02">padding適用要素1</div>
+    <div class="margin-padding block-deco02">padding適用要素2</div>
+    <hr />
+    <h3>ブロック要素に枠線を引く</h3>
+    <p>
+      以下のブロック要素の指定された箇所に対して枠線を引いてください。線の色は何色でも構いません。
+    </p>
+    <div class="border-def block-deco03">枠線：上下左右</div>
+    <div class="border-def block-deco04">枠線:上</div>
+    <div class="border-def block-deco05">枠線:下</div>
+    <div class="border-def block-deco06">枠線:右</div>
+    <div class="border-def block-deco07">枠線:左</div>
+    <hr />
+    <h2>レイアウトの基本、flexboxを理解する.</h2>
+    <p>display: flex;を習得して今後に活かしましょう！</p>
+    <h3>flexboxで横並びにする.</h3>
+    <p>問題：以下の縦に並んだmenu要素を横に並べてください。</p>
+    <ul class="flex-01">
+      <li class="flex-item-def flex-01__item">menu1</li>
+      <li class="flex-item-def flex-01__item">menu2</li>
+      <li class="flex-item-def flex-01__item">menu3</li>
+    </ul>
+    <hr />
+    <h3>flexboxで水平方向の中央に配置する.</h3>
+    <p>
+      問題：以下の緑の枠内に配置された文字列を、緑背景の水平方向の中央に配置してください。
+    </p>
+    <div class="flex-def flex-02">
+      <span class="flex-item-def flex-02__item">この文字を水平方向の中央に配置してください。</span>
+    </div>
+    <hr />
+    <h3>flexboxで垂直方向の中央に配置する.</h3>
+    <p>
+      問題：以下の緑の枠内に配置された文字列を、緑背景の垂直方向の中央に配置してください。
+    </p>
+    <div class="flex-def flex-03">
+      <span class="flex-item-def flex-03__item">この文字を垂直方向の中央に配置してください。</span>
+    </div>
+    <hr />
+    <h3>flexboxで上下左右の中央に配置する.</h3>
+    <p>
+      問題：以下の緑の枠内に配置された文字列を、緑背景の上下左右の中央に配置してください。
+    </p>
+    <div class="flex-def flex-04">
+      <span class="flex-item-def flex-04__item">この文字を中央に配置してください。</span>
+    </div>
+    <h3>flexboxで要素を均等に配置する.</h3>
+    <p>
+      問題：以下の緑の枠内に配置された複数の要素を左右均等に配置してください。
+    </p>
+    <div class="flex-def flex-05">
+      <span class="flex-item-def flex-05__item">均等配置</span>
+      <span class="flex-item-def flex-05__item">均等配置</span>
+      <span class="flex-item-def flex-05__item">均等配置</span>
+      <span class="flex-item-def flex-05__item">均等配置</span>
+    </div>
+    <h3>flexboxで要素を縦に並べる.</h3>
+    <p>
+      問題：以下の緑の枠内に配置された複数の要素をflexを用いて縦に並べてください。
+    </p>
+    <div class="flex-def flex-06">
+      <span class="flex-item-def flex-05__item">flexで縦</span>
+      <span class="flex-item-def flex-05__item">flexで縦</span>
+      <span class="flex-item-def flex-05__item">flexで縦</span>
+      <span class="flex-item-def flex-05__item">flexで縦</span>
+    </div>
+    <hr />
+
+</body>
+
+</html>

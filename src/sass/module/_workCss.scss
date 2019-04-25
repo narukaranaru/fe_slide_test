@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/* リストの先頭の装飾を削除する */
+li {
+  list-style-type: none;
+}
+
+/* 文字を赤色にしてください */
+.text-deco01 {
+
+}
+
+/* 文字サイズを24pxに設定してください */
+.text-deco02 {
+
+}
+
+/* 書体をHelveticaにしてください */
+.text-deco03 {
+
+}
+
+/* (クラスを書き換えて)文字を太くしてください */
+.TEKITOU_CLASS {
+
+}
+
+/* (クラスを指定して)文字に下線を引いてください */
+
+/*  */
+
+/* 複数の宣言を組み合わせましょう。  */
+.text-deco06 {
+  /* 文字色を「#44f」に変更する宣言 */
+  
+  /* 文字サイズを36pxに変更する宣言 */
+  
+  /* 書体をFuturaに変更する宣言 */
+  
+  /* 下線を引く宣言 */
+  
+  /* 文字を太くする宣言 */
+  
+}
+
+
+/* paddingとmarginの差異を分かりやすくするための記述 */
+.margin-padding {
+  background: #55e;
+  border: 1px solid #f44;
+  color: #fff;
+}
+
+/* ブロック要素の余白を作る.(margin) */
+.block-deco01 {
+  /* ここにmarginを指定してください */
+
+}
+
+
+/* ブロック要素の余白を作る.(padding) */
+.block-deco02 {
+  /* ここにpaddingを指定してください */
+
+}
+
+/* これはBorderを分かりやすくするための宣言 */
+.border-def {
+  padding: 12px;
+  margin: 12px;
+  width: 30%;
+  background-color: #ddd;
+}
+
+/* 上下左右に線を引く */
+.block-deco03 {
+    
+}
+
+/* 上だけに線を引く */
+.block-deco04 {
+    
+}
+
+/* 下だけに線を引く */
+.block-deco05 {
+    
+}
+
+/* 右だけに線を引く */
+.block-deco06 {
+    
+}
+
+/* 左だけに線を引く */
+.block-deco07 {
+    
+}
+
+.flex-def {
+  background: lightgreen;
+  height: 100px;
+}
+
+/* 要素を分かりやすくするための記述 */
+.flex-item-def {
+  border: 1px solid #000;
+}
+
+
+/* flexboxで横並びにする. */
+.flex-01 {
+  /* 横並びにするために、display: flex;と入力してみよう */
+  
+}
+
+/* flexboxで水平方向の中央に配置する. */
+.flex-02 {
+  /* flexで何かするということは、親要素に""あの宣言""が必要 */
+  
+  /* flexアイテム（子要素）の横方向の整列を指定する宣言を書く */
+  
+}
+
+/* flexboxで垂直方向の中央に配置する. */
+.flex-03 {
+  /* flexで何かするということは、親要素に""あの宣言""が必要 (大事なことなので) */
+  
+  /* flexアイテム（子要素）に同じ位置揃えを要求する宣言を書く */
+  
+}
+
+/* flexboxで上下中央の中央に配置する. */
+.flex-04 {
+  /* さっきまでの記述を組み合わせてみよう */
+
+}
+
+/* flexboxで要素を均等に配置する. */
+.flex-05 {
+  
+  /* flexアイテムにしてからjustify-contentの値を何かにしてみよう. */
+
+}
+
+/* flexboxで要素を縦に列挙する */
+.flex-06 {
+  /* flexアイテムにしてから、flex-directionというプロパティを使ってみよう. */
+
+}
+
